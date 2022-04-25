@@ -12,11 +12,11 @@
 ### Product page preview modal
 
 
-![Capture d’écran du 2022-04-25 19-17-59](https://user-images.githubusercontent.com/16455155/165140437-4049060d-3a8b-41eb-9302-ecf1cb84d249.png)
+![image](https://user-images.githubusercontent.com/16455155/165141665-7420d35f-126a-4fdf-a353-0cb1416110fd.png)
 
 ### Checkout page
 
-![Capture d’écran du 2022-04-25 19-17-05](https://user-images.githubusercontent.com/16455155/165140432-2f741845-ef93-4816-8abf-2c5152d4307d.png)
+![image](https://user-images.githubusercontent.com/16455155/165141769-f5817751-cdc3-4d73-88a6-dc2c707ebe7e.png)
 
 
 **NOTE** : For free shipping default label will be displayed
