@@ -27,6 +27,11 @@ class Beyonds_carttotals extends Module
 
         $this->ps_versions_compliancy = ['min' => '1.7', 'max' => _PS_VERSION_];
     }
+    
+    public function isUsingNewTranslationSystem()
+    {
+        return true;
+    }
 
     public function install()
     {
@@ -39,7 +44,7 @@ class Beyonds_carttotals extends Module
         $isNotFreeDelivery = $params['presentedCart']['subtotals']['shipping']['amount'] != 0;
 
         if($currentCartHasNotCarrier && $isNotFreeDelivery){
-            $params['presentedCart']['subtotals']['shipping']['value'] = $this->l('A determiner');
+            $params['presentedCart']['subtotals']['shipping']['value'] = $this->trans('To be determined', [], 'Modules.Beyondscarttotals.Shop');
             $params['presentedCart']['totals']['total']['value'] = $params['presentedCart']['subtotals']['products']['value'];
             $params['presentedCart']['totals']['total']['amount'] = $params['presentedCart']['subtotals']['products']['amount'];
         }
