@@ -43,7 +43,10 @@ class Beyonds_carttotals extends Module
         $currentCartHasNotCarrier = !$this->context->cart->id_carrier;
         $isNotFreeDelivery = $params['presentedCart']['subtotals']['shipping']['amount'] != 0;
 
-        if($currentCartHasNotCarrier && $isNotFreeDelivery){
+        if($isNotFreeDelivery) {
+			// Nothing to change in the default PS behavior. Subtotal has to show a no zero delivery cost.
+		}
+		elseif($currentCartHasNotCarrier){
             $params['presentedCart']['subtotals']['shipping']['value'] = $this->trans('To be determined', [], 'Modules.Beyondscarttotals.Shop');
             $params['presentedCart']['totals']['total']['value'] = $params['presentedCart']['subtotals']['products']['value'];
             $params['presentedCart']['totals']['total']['amount'] = $params['presentedCart']['subtotals']['products']['amount'];
